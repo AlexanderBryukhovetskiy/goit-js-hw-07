@@ -35,20 +35,10 @@ const markup = galleryItems.reduce((acc, {original, preview, description} = item
 const imagesContainer = document.querySelector('.gallery');
 imagesContainer.insertAdjacentHTML('beforeend', markup);
 
-//---- 2. lifghtbox ------------------
+//---- 2. SimpleLightbox ------------------
 
-imagesContainer.addEventListener('click', onImageHandleClick);
-
-function onImageHandleClick (e) {
-    e.preventDefault();
-
-    const isImage = e.target.classList.contains('gallery__image');
-    if ( !isImage ) {return};
-
-    const activeImage = e.target;
-
-    const lightbox = new SimpleLightbox('.gallery a', { /* options */
-        captionsData: `${activeImage.alt}`,
-        captionPosition: "bottom",
-        captionDelay: "250"});
-}
+const lightbox = new SimpleLightbox('.gallery a', { 
+    /* options */
+    captionsData: "alt",
+    captionDelay: 250 
+});
