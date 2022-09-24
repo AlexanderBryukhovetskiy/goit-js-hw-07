@@ -48,7 +48,6 @@ function onImageHandleClick (e) {
     const activeImage = e.target;
 
     const lightbox = new SimpleLightbox('.gallery a', { /* options */
-        caption: `${activeImage}`, 
         captionsData: `${activeImage.alt}`,
         captionPosition: "bottom",
         captionDelay: "250"});
