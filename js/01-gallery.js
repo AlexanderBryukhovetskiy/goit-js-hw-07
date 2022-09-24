@@ -31,8 +31,8 @@ import { galleryItems } from './gallery-items.js';
 //console.log(galleryItems);
 
 //  -- 1. creating markup ---------
-function createImageMarkup (galleryItemsMassiveOfObjs) { 
-    return galleryItemsMassiveOfObjs.map( ({preview, original, description}) => {return `
+function createImageMarkup (galleryItemsArrayOfObjs) { 
+    return galleryItemsArrayOfObjs.map( ({preview, original, description}) => {return `
         <div class="gallery__item">
             <a class="gallery__link" href="${original}">
             <img
